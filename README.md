@@ -1,6 +1,6 @@
 # flappy-bird-project
 This project was made as a final challenge of a HTML, CSS, JS online course from Udemy, hosted by "cod3r.com".  
-The challenge was basically to make a "flappy-bird sort of game", using raw HTML, CSS and JS. For this exercise, the teacher has shown his already made game behaviour, and gave us the hint to use flex-box for the game components. 
+The challenge was basically to make a "flappy-bird sort of game", using raw HTML, CSS and JS. The teacher has shown his already made game behaviour, and gave us the hint to use flex-box for the game components. 
 The game must work the following way: 
 - The bird (represented as a yellow square) must fly trought the gaps between pipes placed on the top and bottom of the screen. 
 - The pipes must have random sizes, but the gap between them must aways be the same.
