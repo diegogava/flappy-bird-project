@@ -126,7 +126,7 @@ function definePipesHeight(columnIndex) {
  * Controls the moviments of the game
  */
 function performAnimation() {
-    // Gravidade:
+    // Gravity:
     let newAltitude = birdAltitude + step
     if (newAltitude <= minAltitude) {
         bird.style.top = newAltitude + 'px'
@@ -153,7 +153,7 @@ function performHorizontalMovement(position) {
         // Adjusts the position of the bird, in case the moviment
         // caused by the click has made it cross the limit of the
         // pipe
-        if (checkIfHitsThePipe(newColumnPosition, birdMax)) {
+        if (checkCrossLimitOfPipe(newColumnPosition, birdMax)) {
             bird.style.top = birdMax + 'px'
         }
         gameOver()
@@ -214,7 +214,7 @@ function checkColision(newColumnPosition, birdMax, birdMin) {
  *
  * @returns {boolean}
  */
-function checkIfHitsThePipe(newColumnPosition, birdMax) {
+function checkCrossLimitOfPipe(newColumnPosition, birdMax) {
     return newColumnPosition > possibleColisionRangeStart &&
         newColumnPosition < possibleColisionRangeEnd &&
         birdAltitude <= birdMax
