@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #0D262D;
+    color: #fff;
+    height: 100%;
+}
+
+/*
+ * The css snippet above was imported from 'Web Moderno - Udemy'
+ * course, as well as the chosen font.
+ */
+
+/* Header Styles */
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    position: absolute;
+    justify-self: center;
+    font-weight: bolder;
+}
+
+.score {
+    position: relative;
+    font-weight: 600;
+    left: 260px;
+    padding: 10px;
+    font-size: 25px;
+    margin-top: 35px;
+}
+
+/* Body Styles */
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container.screen-wrapper {
+    display: flex;
+    width: 800px;
+    height: 480px;
+}
+
+.side {
+    width: calc((100vw - 800px)/2);
+    background-color: #0D262D;
+    position: relative;
+    z-index: 5;
+}
+
+/* Game Components Styles */
+
+.flex-container.screen {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    background-color: skyblue;
+    width: 800px;
+    height: 480px;
+    border: 3px solid rgb(50, 126, 156);
+    position: absolute;
+}
+
+/*
+ * The 'top' property makes the bird move up, the maximum
+ * it can reach is 0px, the minimum is 455px
+ */
+.bird {
+    box-sizing: border-box;
+    position: relative;
+    top: 225px;
+    left: 385px;
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+    box-sizing: border-box;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.flex-container.column{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 960px;
+}
+
+.flex-container.pipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+ * The 'height' property sets the size of the top pipe,
+ * the space between them is 100px, so the sum between
+ * the height of the two should always be 380px
+ */
+.flex-container.pipe.top {
+    height: 160px;
+    justify-self: flex-start;
+}
+
+/*
+ * Pipe dimensions: min 100 max 280px, for gameplay purposes.
+ * The 'height' property sets the size of the top pipe,
+ * the space between them is 100px, so the sum between
+ * the height of the two should always be 380px
+ */
+.flex-container.pipe.bottom {
+    height: 220px;
+    justify-self: flex-end;
+}
+
+.pipe-top {
+    background-color: green;
+    border: 1px solid black;
+    height: 20px;
+    width: 100%;
+}
+
+.pipe-bottom {
+    background-color: green;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 70px;
+    height: 100%;
+}
+
+.space-between-pipes {
+    height: 94px;
+}
+
+/* Footer Styles */
+
+.instructions {
+    font-size: 26px;
+    margin-top: 8px;
+}
